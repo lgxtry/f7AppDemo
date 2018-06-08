@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#f44336">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>My App</title>
+  
+    <link rel="stylesheet" href="framework7/css/framework7.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_697196_xstc5lr8evhx5hfr.css">
+    <style>
+.demo-swiper .swiper-slide {
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+.demo-swiper .swiper-slide {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.demo-swiper {
+  margin: 0px 0 35px;
+  font-size: 18px;
+  height: 150px;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide {
+  width: 85%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+  width: 30%;
+}
+/**/
+div[class*="col"] {
+  background: #fff;
+  text-align: center;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 1px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+div[class*="col"] i {
+  font-size: 36px;
+   color: red;
+}
+div[class*="col"] span {
+  font-size: 16px;
+}
+
+a[class*='tab-link'] i{font-size: 20px;}
+a[class*='tab-link'] span{font-size: 12px;}
+div[class*='swiper-slide'] img{ width: 100%;}
+div[class*='col-33'] a{display:block;}
+    </style>
+</head>
+<body class="color-theme-red">
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title" style="text-align: center">布山党旗红</div>
+            </div>
+          </div>
+
+          <!-- Toolbar -->
+  <!-- Additional "tabbar-labels" class -->
+  <div class="toolbar tabbar tabbar-labels toolbar-bottom-md ">
+    <div class="toolbar-inner">
+      <a href="#tab1" class="tab-link tab-link-active">
+        <i class="iconfont icon-djjy"></i>
+        <span class="tabbar-label">首页</span>
+      </a>
+      <a href="#tab2" class="tab-link">
+        <i class="iconfont icon-icon-xiaoxi"></i>
+        <span class="tabbar-label">消息</span>
+      </a>
+      <a href="#tab3" class="tab-link">
+          <i class="iconfont icon-daiban"></i>
+          <span class="tabbar-label">待办</span>
+        </a>
+        <a href="#tab4" class="tab-link">
+            <i class="iconfont icon-me2"></i>
+            <span class="tabbar-label">个人</span>
+          </a>
+    </div>
+  </div>
+
+
+  <!-- Tabs wrapper, shoud have "tabs" class. Required element -->
+<div class="tabs">
+  <!-- First tab, should have "tab" class and unique id attribute -->
+  <!-- First tab is active by default - additional "tab-active" class -->
+  <div class="tab tab-active" id="tab1">
+              <!-- Scrollable page content -->
+              <div class="page-content">
+                <!-- Slider container（滑动轮播组件） -->
+                <div data-speed="90" data-pagination='{"el": ".swiper-pagination"}' class="swiper-container swiper-init demo-swiper">
+                        <div class="swiper-pagination"></div>
+                    <!-- Slides wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                          <img src="http://202.103.219.147:8012/upload/image/20180507/6366127928828109386937559.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                </div>
+                <!--九宫格-->
+                <div class="row no-gap">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                    <div class="col-33"> <a href="/newsList1/" ><i class="iconfont icon-xw"></i><br><span>党建新闻</span></a> </div>
+                    <div class="col-33"><i class="iconfont icon-zizhujiaofei "></i><br><span>党费管理</span></div>
+                    <div class="col-33"><i class="iconfont icon-zuzhiguanli"></i><br><span>组织生活</span></div>
+                </div>
+                <div class="row no-gap">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                    <div class="col-33"><i class="iconfont icon-shangbao"></i><br><span>工作上报</span></div>
+                    <div class="col-33"><i class="iconfont icon-xuexiyuandi"></i><br><span>学习园地</span></div>
+                    <div class="col-33"><i class="iconfont icon-paihangbang"></i><br><span>积分排行</span></div>
+                </div>
+                <div class="row no-gap">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                    <div class="col-33"><i class="iconfont icon-fengcai1"></i><br><span>支部风采</span></div>
+                    <div class="col-33"><i class="iconfont icon-gongyizhongxin"></i><br><span>公益活动</span></div>
+                    <div class="col-33"><i class="iconfont icon-msnui-service"></i><br><span>便民服务</span></div>
+                </div>
+              </div>
+  </div>
+  <!-- Second tab, should have "tab" class and unique id attribute -->
+  <div class="tab" id="tab2">
+    <div class="page-content">
+
+        ... Tab 2 content goes here ...
+    </div>
+  </div>
+  <div class="tab" id="tab3">
+      <div class="page-content">
+  
+          ... Tab 3 content goes here ...
+      </div>
+    </div>
+    <div class="tab" id="tab4">
+        <div class="page-content">
+    
+            ... Tab 4 content goes here ...
+        </div>
+      </div>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+        <!-- Path to Framework7 Library JS-->
+        <script type="text/javascript" src="framework7/js/framework7.min.js"></script>
+        <!-- Path to your app js-->
+        <script type="text/javascript" src="js/gg-app.js?v=2"></script>
+        <script>
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<template>
+<div class="page" data-name="newsList">
+        <div class="navbar">
+                <div class="navbar-inner sliding">
+                  <div class="left">
+                    <a href="#" class="link back">
+                      <i class="icon icon-back"></i>
+                      <span class="ios-only">Back</span>
+                    </a>
+                  </div>
+                  <div class="title">新闻列表</div>
+                </div>
+              </div>
+              <div class="page-content">
+                <div class="list media-list">
+                  <ul>
+                      {{#each products}}
+                      <li>
+                          <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="{{imgUrl}}" width="100"/></div>
+                            <div class="item-inner">
+                              <div class="item-title-row">
+                                <div class="item-text">{{mainTitle}}</div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        {{/each}}
+                  </ul>
+                </div>
+
+              </div>
+</div>
+</template>
+<script>
+    return {
+      data: function () {
+        return {
+          products: [
+            {
+              mainTitle:'市工商局:开展政治理论知识测试主题党日活动',
+            imgUrl:'http://202.103.219.147:8012/upload/image/20180608/6366404550680175784891010.png'
+            },
+            {
+              mainTitle:'市工商局:开展政治理论知识测试主题党日活动',
+            imgUrl:'http://202.103.219.147:8012/upload/image/20180608/6366404550680175784891010.png'
+            },
+            {
+              mainTitle:'市工商局:开展政治理论知识测试主题党日活动',
+            imgUrl:'http://202.103.219.147:8012/upload/image/20180608/6366404550680175784891010.png'
+            }
+
+          ]
+        };
+      }
+    };
+  </script>
